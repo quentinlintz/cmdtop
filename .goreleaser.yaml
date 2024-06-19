@@ -1,0 +1,21 @@
+project_name: cmdtop
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    main: ./cmdtop.go
+archives:
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+changelog:
+  use: git
+release:
+  github:
+    owner: quentinlintz 
+    name: cmdtop

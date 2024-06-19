@@ -47,20 +47,32 @@ Have you ever wondered what commands you're running the most for work or persona
 
 ### Prerequisites
 
-
+Follow the instructions for downloading and installing [Go](https://go.dev/doc/install).
 
 ### Installation
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Clone the repo
+   ```
+   git clone https://github.com/quentinlintz/cmdtop.git
+   ```
+2. Change directory and run the command
+   ```
+   cd cmdtop
+   go run .
+   ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+* Use the `-h` flag to list detailed flag usage
+* Use the `-t {int}` flag to choose how many top commands to display
+* Use the `-version` flag to check the version
+* Use the `-license` flag to view the software license
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
