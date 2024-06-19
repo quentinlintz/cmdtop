@@ -8,7 +8,8 @@ import (
 	"os"
 	"path"
 
-	. "github.com/quentinlintz/cmdtop/config"
+	"github.com/quentinlintz/cmdtop/config"
+	"github.com/quentinlintz/cmdtop/history"
 )
 
 var (
@@ -23,7 +24,7 @@ Options:
 )
 
 func main() {
-	cfg := Config{}
+	cfg := config.Config{}
 
 	flag.Usage = func() {
 		name := path.Base(os.Args[0])
@@ -46,13 +47,15 @@ func main() {
 		os.Exit(0)
 	}
 
-	if err := ParseEnv(&cfg); err != nil {
+	if err := config.ParseEnv(&cfg); err != nil {
 		log.Fatalf("error parsing environment: %s", err)
 	}
 
-	if err := ValidateConfig(&cfg); err != nil {
+	if err := config.ValidateConfig(&cfg); err != nil {
 		log.Fatalf("error validating config: %s", err)
 	}
 
-	fmt.Printf("Config: %+v\n", cfg)
+	var p history.Parser
+	p = &history.ZshParser{}
+	history.PrintTopCommands(cfg, p)
 }
