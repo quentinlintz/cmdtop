@@ -9,7 +9,7 @@ func TestParseEnv(t *testing.T) {
 	t.Setenv("HOME", "/home/quentin")
 
 	var cfg Config
-	err := parseEnv(&cfg)
+	err := ParseEnv(&cfg)
 	if err != nil {
 		t.Fatalf("Failed to parse environment variables: %v", err)
 	}

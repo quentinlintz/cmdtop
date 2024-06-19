@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func parseEnv(config *Config) error {
+func ParseEnv(config *Config) error {
 	const shellKey = "SHELL"
 
 	shellPath := os.Getenv(shellKey)
