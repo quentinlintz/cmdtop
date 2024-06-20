@@ -1,0 +1,5 @@
+: 1623086604:0;ls -la
+: 1623086605:0;cd /home
+: 1623086606:0;git status
+: 1623086607:0;ls -la
+: 1623086608:0;git commit -m "Initial commit"

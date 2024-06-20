@@ -9,6 +9,8 @@ import (
 	"github.com/quentinlintz/cmdtop/models"
 )
 
+// Parsers will implement ParseHistory which should result in identical
+// output regardless of shell
 type Parser interface {
 	ParseHistory(filePath string) ([]models.Command, error)
 }
