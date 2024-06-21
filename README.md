@@ -24,6 +24,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -37,6 +38,18 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 Have you ever wondered what commands you're running the most for work or personal projects? `cmdtop` lets you show off your history as a way of showcasing favorite tools, processes, or just plain habits.
 
+Here's my `cmdtop`:
+
+```
+Top 5 commands:
+1: ls (46)
+2: cd (40)
+3: vi (25)
+4: yay (20)
+5: go (15)
+```
+
+At the top is `ls` (pretty common) and I've used it _46_ times.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,9 +81,22 @@ Follow the instructions for downloading and installing [Go](https://go.dev/doc/i
 ## Usage
 
 * Use the `-h` flag to list detailed flag usage
-* Use the `-t {int}` flag to choose how many top commands to display
+* Use the `-top {int}` flag to choose how many top commands to display
 * Use the `-version` flag to check the version
 * Use the `-license` flag to view the software license
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Add zsh parser 
+- [ ] Add bash parser 
+- [ ] Add fish parser
+- [ ] Enhance output format (open to creative ideas!) 
+
+See the [open issues](https://github.com/quentinlintz/cmdtop/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
