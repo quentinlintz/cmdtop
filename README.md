@@ -92,7 +92,7 @@ Follow the instructions for downloading and installing [Go](https://go.dev/doc/i
 ## Roadmap
 
 - [x] Add zsh parser 
-- [ ] Add bash parser 
+- [x] Add bash parser 
 - [ ] Add fish parser
 - [ ] Enhance output format (open to creative ideas!) 
 
