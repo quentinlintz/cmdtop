@@ -22,6 +22,8 @@ func ParseEnv(config *Config) error {
 	switch shellName {
 	case "zsh":
 		config.HistoryPath = home + "/.zsh_history"
+	case "bash":
+		config.HistoryPath = home + "/.bash_history"
 	case "":
 		return fmt.Errorf("can't parse %s environment variable value", shellKey)
 	default:
