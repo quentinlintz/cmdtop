@@ -56,6 +56,12 @@ func main() {
 	}
 
 	var p history.Parser
-	p = &history.ZshParser{}
+	switch cfg.ShellType {
+	case "zsh":
+		p = &history.ZshParser{}
+	case "bash":
+		p = &history.BashParser{}
+	}
+
 	history.PrintTopCommands(cfg, p)
 }

@@ -21,6 +21,8 @@ func PrintTopCommands(cfg config.Config, p Parser) {
 		log.Fatalf("Error parsing history: %v", err)
 	}
 
+	log.Printf("commands in PrintTopCommands: %#v", commands)
+
 	sort.Slice(commands, func(i, j int) bool {
 		return commands[i].Count > commands[j].Count
 	})
