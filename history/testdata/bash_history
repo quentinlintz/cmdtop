@@ -1,0 +1,5 @@
+ls -la
+cd /home
+git status
+ls -la
+git commit -m "Initial commit"

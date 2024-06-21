@@ -2,7 +2,6 @@ package history
 
 import (
 	"bufio"
-	"log"
 	"os"
 	"strings"
 
@@ -36,8 +35,6 @@ func (p *BashParser) ParseHistory(filepath string) ([]models.Command, error) {
 	for name, count := range commandMap {
 		commands = append(commands, models.Command{Name: name, Count: count})
 	}
-
-	log.Printf("commands: %#v", commands)
 
 	return commands, nil
 }
