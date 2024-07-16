@@ -21,13 +21,19 @@ func (p *ZshParser) ParseHistory(filePath string) ([]models.Command, error) {
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
+		var commandText string
 		if strings.HasPrefix(line, ":") {
 			parts := strings.SplitN(line, ";", 2)
 			if len(parts) == 2 {
-				command := strings.Fields(parts[1])
-				if len(command) > 0 {
-					commandMap[command[0]]++
-				}
+				commandText = parts[1]
+			}
+		} else {
+			commandText = line
+		}
+		if commandText != "" {
+			command := strings.Fields(commandText)
+			if len(command) > 0 {
+				commandMap[command[0]]++
 			}
 		}
 	}
