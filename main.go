@@ -61,6 +61,8 @@ func main() {
 		p = &history.ZshParser{}
 	case "bash":
 		p = &history.BashParser{}
+	case "fish":
+		p = &history.FishParser{}
 	}
 
 	history.PrintTopCommands(cfg, p)
