@@ -22,6 +22,7 @@ func TestParseHistory(t *testing.T) {
 	}{
 		{"Zsh", &ZshParser{}, "zsh_history"},
 		{"Bash", &BashParser{}, "bash_history"},
+		{"Fish", &FishParser{}, "fish_history"},
 	}
 
 	for _, tt := range tests {
@@ -39,6 +40,7 @@ func TestHistoryFileNotFound(t *testing.T) {
 	}{
 		{"Zsh", &ZshParser{}},
 		{"Bash", &BashParser{}},
+		{"Fish", &FishParser{}},
 	}
 
 	for _, tt := range tests {
