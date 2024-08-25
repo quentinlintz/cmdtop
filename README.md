@@ -93,7 +93,7 @@ Follow the instructions for downloading and installing [Go](https://go.dev/doc/i
 
 - [x] Add zsh parser 
 - [x] Add bash parser 
-- [ ] Add fish parser
+- [x] Add fish parser
 - [ ] Enhance output format (open to creative ideas!) 
 
 See the [open issues](https://github.com/quentinlintz/cmdtop/issues) for a full list of proposed features (and known issues).
