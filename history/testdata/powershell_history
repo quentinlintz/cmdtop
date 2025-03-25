@@ -1,0 +1,5 @@
+ls -la
+cd C:\Users
+git status
+ls -la
+git commit -m "Initial commit" 
